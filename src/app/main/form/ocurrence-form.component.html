@@ -1,0 +1,16 @@
+<app-navbar></app-navbar>
+<form [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>título</mat-label>
+    <input matInput formControlName="title" placeholder="titulo">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>descrição</mat-label>
+    <textarea matInput formControlName="description" size="12" placeholder="escreva aqui seu problema"></textarea>
+  </mat-form-field>
+
+  <div class="form-buttons">
+    <button mat-raised-button routerLink="/ocorrencia/list">Voltar</button>
+    <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
+  </div>
+</form>

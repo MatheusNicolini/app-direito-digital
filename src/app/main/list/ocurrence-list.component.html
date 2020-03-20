@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="list-options">
+  <button mat-raised-button color="primary" routerLink="../form" style="margin-bottom: 20px;">+ Novo</button>
+</div>
+<div class="table">
+  <div class="row header">
+    <div class="cell">Título</div>
+    <div class="cell">Autor</div>
+    <div class="cell">Data</div>
+    <div class="cell">Descrição</div>
+    <div class="cell">Detalhes</div>
+  </div>
+  <div class="row" *ngFor="let ocurrence of ocurrences">
+    <div class="cell">{{ocurrence.title}}</div>
+    <div class="cell">{{ocurrence.user.name}}</div>
+    <div class="cell">{{ocurrence.date | date:'dd/MM/yyyy'}}</div>
+    <div class="cell">{{ocurrence.description}}</div>
+    <div class="cell">
+      <mat-icon (click)="goToForm(ocurrence.id)">search</mat-icon>
+    </div>
+  </div>
+</div>

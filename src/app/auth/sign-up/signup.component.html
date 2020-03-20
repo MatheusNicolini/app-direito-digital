@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+  <img src="../../../assets/logo.png" alt="logo"/>
+  <mat-form-field appearance="outline">
+    <mat-label>nome</mat-label>
+    <input matInput formControlName="name" placeholder="nome">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>cpf</mat-label>
+    <input matInput formControlName="cpf" placeholder="cpf">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <input matInput formControlName="email" placeholder="email">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>senha</mat-label>
+    <input matInput formControlName="password" type="password" placeholder="senha">
+    <mat-icon matSuffix>visibility</mat-icon>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>confirmar senha</mat-label>
+    <input matInput formControlName="confirmPassword" type="password" placeholder="confirmar senha">
+    <mat-icon matSuffix>visibility</mat-icon>
+  </mat-form-field>
+  <div class="form-buttons">
+    <button mat-raised-button routerLink="/login">Voltar</button>
+    <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
+  </div>
+</form>

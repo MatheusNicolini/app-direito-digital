@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+  <img src="../../../assets/logo.png" alt="logo"/>
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <input matInput formControlName="email" placeholder="email">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>senha</mat-label>
+    <input matInput formControlName="password" type="password" placeholder="senha">
+    <mat-icon matSuffix>visibility</mat-icon>
+  </mat-form-field>
+  <div class="form-buttons">
+    <button mat-raised-button routerLink="/signup">Cadastrar</button>
+    <button mat-raised-button color="primary" (click)="login()">Entrar</button>
+  </div>
+  <button mat-button>Esqueceu a senha?</button>
+</form>
